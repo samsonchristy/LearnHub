@@ -120,3 +120,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+#This is the setting used by the auth module to redirect the user to
+#after a successful login if no next parameter is present in the
+#request.
+from django.urls import reverse_lazy
+LOGIN_REDIRECT_URL = reverse_lazy('stuudent_course_list')
