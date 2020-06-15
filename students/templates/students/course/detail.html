@@ -19,7 +19,7 @@
         </ul>
     </div>
     <div class="module">
-        {% for content in module.cotents.all%}
+        {% for content in module.contents.all %}
             {% with item=content.item %}
                 <h2>{{ item.title }}</h2>
                 {{item.render}}
