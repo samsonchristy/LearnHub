@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #3rdparty
     'embed_video',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -133,3 +134,10 @@ LOGIN_REDIRECT_URL = reverse_lazy('student_course_list')
 #media files
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+#REST_FRAMEWORK settings
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES':[
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
